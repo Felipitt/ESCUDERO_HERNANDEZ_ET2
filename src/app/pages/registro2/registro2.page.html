@@ -1,0 +1,88 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <div class="back-circle"></div>
+    <ion-title class="ion-text-center">Pasajero</ion-title>
+  </ion-toolbar>
+</ion-header>
+    
+
+<ion-content fullscreen="true">
+  <ion-card>
+  
+  <br>
+  <br>
+  <ion-avatar class="avatar">
+    <img src="assets/logo.jpeg">
+  </ion-avatar>
+
+
+  <div class="ion-padding">
+    <form class="ion-padding" [formGroup]="formularioRegistro2" (keyup.enter)="CrearUsuario()">
+
+     <ion-item class="wrap-input">
+       <ion-label color="dark" position="floating">Nombre:</ion-label>
+       <ion-input class="input" type="text" formControlName="nombre"></ion-input>
+     </ion-item>
+
+     <ion-item class="wrap-input">
+       <ion-label color="dark" position="floating">Correo:</ion-label>
+       <ion-input class="input" type="email" formControlName="correo" 
+                  pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                  required></ion-input>
+     </ion-item>
+
+     <ion-item class="wrap-input">
+       <ion-label color="dark" position="floating">Password:</ion-label>
+       <ion-input class="input" type="password" formControlName="password"></ion-input>
+     </ion-item>
+
+     <ion-item class="wrap-input">
+       <ion-label color="dark" position="floating">Confirma Pass:</ion-label>
+       <ion-input class="input" type="password" formControlName="confirmaPass"></ion-input>
+     </ion-item>
+
+     <ion-item class="wrap-input">
+       <ion-label color="dark">Género:</ion-label>
+       <ion-select class="input" formControlName="genero" placeholder="Seleccionar">
+         <ion-select-option value="femenino">Femenino</ion-select-option>
+         <ion-select-option value="masculino">Masculino</ion-select-option>
+       </ion-select>
+     </ion-item>
+
+
+     <ion-item class="wrap-input">
+      <ion-label color="dark">Selecciona tu Sede </ion-label>
+      <ion-select class="input" formControlName="sede" placeholder="Seleccionar">
+        <ion-select-option value="sede1">Sede Alameda</ion-select-option>
+        <ion-select-option value="sede2">Sede Antonio Varas</ion-select-option>
+        <ion-select-option value="sede3">Sede Educación Continua</ion-select-option>
+        <ion-select-option value="sede4">Sede Maipú</ion-select-option>
+        <ion-select-option value="sede5">Sede Melipilla</ion-select-option>
+        <ion-select-option value="sede6">Sede Padre Alonso de Ovalle</ion-select-option>
+        <ion-select-option value="sede7">Sede Plaza Oeste</ion-select-option>
+        <ion-select-option value="sede8">Sede Plaza Norte</ion-select-option>
+        <ion-select-option value="sede9">Sede Plaza Vespucio</ion-select-option>
+        <ion-select-option value="sede10">Sede Puente Alto</ion-select-option>
+        <ion-select-option value="sede11">Sede San Bernardo</ion-select-option>
+        <ion-select-option value="sede12">Sede San Carlos de Apoquindo</ion-select-option>
+        <ion-select-option value="sede13">Sede San Joaquín</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+
+    </form>
+    <br>
+    <ion-button class="form-btn" (click)="CrearUsuario()" expand="block" fill="outline" shape="round">
+      Registrar
+    </ion-button>
+
+    <ion-button class="form-btn" routerLink="/inicio2" expand="block" fill="outline" shape="round">
+      Login
+    </ion-button>
+
+  </div>
+</ion-card>
+</ion-content>
+
+
+

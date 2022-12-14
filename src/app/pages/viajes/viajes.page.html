@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()" color="dark">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+    
+    <ion-buttons slot="end" routerLink="/inicio2">
+      <ion-button color="dark">
+        <ion-icon slot="start" name="person-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+
+    <ion-buttons slot="end">
+      <ion-button (click)="salir()" color="dark">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+
+    <ion-title color="dark">Mi Viaje</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+  <capacitor-google-map #map></capacitor-google-map>
+</div>
+
+
+
+<ion-card color="success">
+  <ion-card-header>
+    <ion-card-title >Conductor en Camino</ion-card-title>
+    <ion-item *ngFor="let c of conductores">
+      <ion-label>{{c.nombre}}</ion-label>
+      <ion-label>{{c.patente}}</ion-label>
+    
+    </ion-item>
+    <ion-card-subtitle >Tiempo de llegada: 5 minutos</ion-card-subtitle>
+    <ion-button (click)="pago()">Pago</ion-button>
+  </ion-card-header>
+</ion-card>
+</ion-content>
+
+
+
+
+<ion-footer>
+  <ion-toolbar color="secondary">
+  </ion-toolbar>
+</ion-footer>
+
+
+
+

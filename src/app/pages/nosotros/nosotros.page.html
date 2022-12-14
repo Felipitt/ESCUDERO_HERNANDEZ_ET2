@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()" color="dark">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+    
+    <ion-buttons slot="end" routerLink="/inicio2">
+      <ion-button color="dark">
+        <ion-icon slot="start" name="person-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+
+    <ion-buttons slot="end">
+      <ion-button (click)="salir()" color="dark">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+
+    <ion-title color="dark">Nosotros</ion-title>
+  </ion-toolbar>
+   </ion-header>
+
+
+
+<ion-content>
+  <ion-card>
+    <img src="assets/logo.jpeg" />
+    <ion-card-header>
+      <ion-card-title>¿Para que Sirve?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Nuestra App (TaxiTravel) cuenta con la funcionalidad para que todos Alumnos pertenecientes a Duoc
+      puedan ingresar a Taxi Travel en busca de una locomoción segura y de confianza.
+    </ion-card-content>
+  </ion-card>
+
+  <br>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Mejores Rutas</ion-card-title>
+    </ion-card-header>
+    <img src="assets/mapa.jpg" />
+  </ion-card>
+
+  <br>
+   
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Nuestra Solución</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Mejorar los tiempos y costos de los viajes de Alumnos de DUOC UC. A través de esto nuestra plataforma sera adaptable
+       tanto como para Android e iOS.
+    </ion-card-content>
+    <img src="assets/vespertino.jpg" />
+  </ion-card>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="secondary">
+  </ion-toolbar>
+</ion-footer>
+
+
+
+

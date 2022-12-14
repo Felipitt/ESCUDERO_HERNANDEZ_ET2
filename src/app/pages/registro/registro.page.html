@@ -1,0 +1,80 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <div class="back-circle"></div>
+    <ion-title class="ion-text-center">Conductor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+  <ion-card>
+
+    <br>
+    <br>
+    <ion-avatar class="avatar">
+      <img src="assets/logo.jpeg">
+    </ion-avatar>
+
+
+    <div class="ion-padding">
+       <form class="ion-padding" [formGroup]="formularioRegistro" (keyup.enter)="CrearUsuario()">
+
+        <ion-item class="wrap-input">
+          <ion-label color="dark" position="floating">Nombre:</ion-label>
+          <ion-input class="input" type="text" formControlName="nombre"></ion-input>
+        </ion-item>
+
+        <ion-item class="wrap-input">
+          <ion-label color="dark" position="floating">Correo:</ion-label>
+          <ion-input class="input"  type="email" formControlName="correo" 
+          pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+            required></ion-input>
+        </ion-item>
+
+        <ion-item class="wrap-input" >
+          <ion-label color="dark" position="floating">Password:</ion-label>
+          <ion-input class="input" type="password" formControlName="password"
+          ></ion-input>
+        </ion-item>
+
+        <ion-item class="wrap-input">
+          <ion-label color="dark" position="floating">Confirma Pass:</ion-label>
+          <ion-input class="input" type="password" formControlName="confirmaPass"></ion-input>
+        </ion-item>
+
+        <ion-item class="wrap-input">
+          <ion-label color="dark"position="floating">Patente:</ion-label>
+          <ion-input class="input" type="text" formControlName="patente"></ion-input>
+        </ion-item>
+
+        <ion-item class="wrap-input">
+          <ion-label color="dark" >Género:</ion-label>
+          <ion-select class="input" formControlName="genero" placeholder="Seleccionar">
+            <ion-select-option value="femenino">Femenino</ion-select-option>
+            <ion-select-option value="masculino">Masculino</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item  class="wrap-input">
+          <ion-label color="dark">Tipo Licencia:</ion-label>
+          <ion-select class="input" formControlName="tipolicencia" placeholder="Seleccionar">
+            <ion-select-option value="claseA">Clase A</ion-select-option>
+            <ion-select-option value="claseB">Clase B</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+
+       </form>
+       <br>
+       <ion-button class="form-btn" (click)="CrearUsuario()" expand="block" fill="outline" shape="round">
+         Registrar
+       </ion-button>
+
+       <ion-button class="form-btn" routerLink="/inicio2" expand="block" fill="outline" shape="round">
+        Login
+      </ion-button>
+      
+      </div>
+  </ion-card>
+</ion-content>
+
+

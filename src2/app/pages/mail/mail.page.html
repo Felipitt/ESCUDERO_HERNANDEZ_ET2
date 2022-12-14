@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>Recuperar Contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <br>
+  <ion-card>
+    <form [formGroup]="formularioCorreo">
+      <ion-item>
+      <ion-label color="dark">Correo: </ion-label>
+      <ion-input type="email" formControlName="correo">
+      </ion-input>
+      </ion-item>
+    </form>
+
+      <ion-button (click)="Enviar()" color="dark"
+            type="submit" expand="block">
+      Enviar
+    </ion-button>
+
+  </ion-card>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="secondary">
+  </ion-toolbar>
+</ion-footer>
+

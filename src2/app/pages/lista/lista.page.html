@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()" color="dark">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+    
+    <ion-buttons slot="end" routerLink="/inicio2">
+      <ion-button color="dark">
+        <ion-icon slot="start" name="person-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+
+    <ion-buttons slot="end">
+      <ion-button (click)="salir()" color="dark">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+   </ion-header>
+
+
+<ion-content>
+
+<ion-list>
+  <ion-list-header>
+    <ion-label>Pasajeros Disponibles</ion-label>
+  </ion-list-header>
+  <ion-item *ngFor="let p of pasajeros">
+    <ion-label>{{p.nombre}}</ion-label> <p>
+      <ion-label>{{p.numero}}</ion-label>
+    </p>
+  </ion-item>
+
+</ion-list>
+
+<ion-button (click)="continuar()" expand="block" fill="clear" class="form-btn" color="success">
+  Continuar
+</ion-button>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="secondary">
+  </ion-toolbar>
+</ion-footer>
+

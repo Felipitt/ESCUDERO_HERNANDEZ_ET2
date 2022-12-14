@@ -1,0 +1,63 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <div class="back-circle"></div>
+    <ion-title class="ion-text-center">Login</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+  <ion-card>
+    <br>
+    <br>
+    <ion-avatar class="avatar">
+      <img src="assets/logo.jpeg">
+    </ion-avatar>
+    
+
+    <div class="ion-padding">
+        <form class="ion-padding" [formGroup]="formularioLogin">
+
+          <ion-item class="wrap-input">
+            <ion-label color="dark" position="floating">Nombre: </ion-label>
+            <ion-input class="input" type="text" formControlName="nombre"></ion-input>
+          </ion-item>
+
+          <ion-item class="wrap-input">
+            <ion-label color="dark"  position="floating">Correo: </ion-label>
+            <ion-input class="input" type="email" formControlName="correo"
+            pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+            required></ion-input>
+          </ion-item>
+
+          <ion-item class="wrap-input">
+            <ion-label color="dark" position="floating">Password: </ion-label>
+            <ion-input class="input" type="password" formControlName="password"></ion-input>
+          </ion-item>
+
+
+          <br>
+          <ion-label [routerLink] ="['/mail']" color="danger">Olvide mi Contraseña</ion-label>
+
+          
+        </form>
+        <br>
+        <ion-button class="form-btn "(click)="Ingresar()" expand="block" fill="outline" shape="round">
+          Ingresar
+        </ion-button>
+        <br>
+        <ion-button  [routerLink] = "['/registro']"  expand="block" fill="outline" shape="round" class="form-btn">
+        Registro Conductor
+        </ion-button>
+        
+    
+      </div>
+  </ion-card>
+</ion-content>
+
+
+
+
+
+
+

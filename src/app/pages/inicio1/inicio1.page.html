@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()" color="dark">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <div class="cart-item" *ngFor="let u of usuarios">
+      <span>{{ u.nombre }} </span>
+      
+    </div>
+    
+    
+    <ion-buttons slot="end" routerLink = "/inicio2">
+      <ion-button color="dark">
+        <ion-icon slot="start" name="person-circle-outline"></ion-icon>
+
+      </ion-button>
+    </ion-buttons>
+
+
+    <ion-buttons slot="end">
+      <ion-button (click)="salir()" color="dark">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title color="dark">Inicio</ion-title>
+  
+  </ion-toolbar>
+  </ion-header>
+
+
+   <ion-content>
+    <ion-card-content>
+
+      
+      <br>
+      <br>
+      <ion-card-title class="text">Taxy Travel</ion-card-title>
+      <br>
+      <img src="assets/logo.jpeg"/>
+    </ion-card-content>
+
+    <br>
+    <br>
+    <div class="icon">
+      &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;<ion-icon name="logo-facebook" color="medium"></ion-icon> &nbsp;&nbsp;  
+      <ion-icon name="logo-instagram"></ion-icon>   &nbsp;&nbsp;
+      <ion-icon name="logo-whatsapp" color="success"></ion-icon> 
+    </div>
+
+  </ion-content>
+
+  <ion-footer>
+    <ion-toolbar color="secondary">
+    </ion-toolbar>
+  </ion-footer>
+
+
+
+
+  
+
+  

@@ -1,0 +1,149 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()" color="dark">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+    
+    <ion-buttons slot="end" routerLink="/inicio2">
+      <ion-button color="dark">
+        <ion-icon slot="start" name="person-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+
+    <ion-buttons slot="end">
+      <ion-button (click)="salir()" color="dark">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title color="dark">Conductor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+
+    <br>
+    <ion-avatar class="avatar">
+      <img src="assets/logo.jpeg">
+    </ion-avatar>
+
+    <ion-card-header>
+      <ion-card-title>Conductor</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+       <form [formGroup]="formularioDatos" (keyup.enter)="CrearInfo()">
+
+
+        <ion-item>
+          <ion-label position="floating">Nombre:</ion-label>
+          <ion-input type="text" formControlName="nombre"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Patente:</ion-label>
+          <ion-input type="text" formControlName="patente" ></ion-input>
+        </ion-item>
+
+
+
+
+    <ion-item>
+      <ion-label position="floating">Punto de Inicio:</ion-label>
+      <ion-select formControlName="inicio" placeholder="Seleccionar">
+        <ion-select-option >Sede Alameda</ion-select-option>
+        <ion-select-option >Sede Antonio Varas</ion-select-option>
+        <ion-select-option >Sede Educación Continua</ion-select-option>
+        <ion-select-option >Sede Maipú</ion-select-option>
+        <ion-select-option >Sede Melipilla</ion-select-option>
+        <ion-select-option >Sede Padre Alonso de Ovalle</ion-select-option>
+        <ion-select-option >Sede Plaza Oeste</ion-select-option>
+        <ion-select-option >Sede Plaza Norte</ion-select-option>
+        <ion-select-option >Sede Plaza Vespucio</ion-select-option>
+        <ion-select-option >Sede Puente Alto</ion-select-option>
+        <ion-select-option >Sede San Bernardo</ion-select-option>
+        <ion-select-option >Sede San Carlos de Apoquindo</ion-select-option>
+        <ion-select-option >Sede San Joaquín</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="floating">Destino:</ion-label>
+      <ion-select formControlName="destino" placeholder="Seleccionar">
+        <ion-select-option >Providencia: $5000 </ion-select-option>
+        <ion-select-option >Las condes: $6000</ion-select-option>
+        <ion-select-option >Maipu: $2000</ion-select-option>
+        <ion-select-option >Lo Barnechea: $6000</ion-select-option>
+        <ion-select-option >Padre Hurtado: $3000</ion-select-option>
+        <ion-select-option >Cerrillos: $3000</ion-select-option>
+        <ion-select-option >Pudahuel: $4000 </ion-select-option>
+        <ion-select-option >Quinta Normal: $5000</ion-select-option>
+        <ion-select-option >Estacion Central: $4000</ion-select-option>
+        <ion-select-option >San Bernardo: $5000 </ion-select-option>
+        <ion-select-option >La Pintana: $6000</ion-select-option>
+        <ion-select-option >Pedro Aguirre Cerda: $5000</ion-select-option>
+        <ion-select-option >Macúl: $6000</ion-select-option>
+        <ion-select-option >La Florida: $6000</ion-select-option>
+        <ion-select-option >La Reina: $5000</ion-select-option>
+        <ion-select-option >Puente Alto: $7000</ion-select-option>
+        <ion-select-option >Independecia: $7000</ion-select-option>
+        <ion-select-option >Ñuñoa: $7000</ion-select-option>
+        <ion-select-option >Vitacura: $6000</ion-select-option>
+        <ion-select-option >Huechuraba: $7000</ion-select-option>
+        <ion-select-option >Conchali: $6000</ion-select-option>
+        <ion-select-option >Lo Espejo: $4000</ion-select-option>
+        <ion-select-option >La Cisterna: $5000</ion-select-option>
+        <ion-select-option >San Ramon: $6000</ion-select-option>
+        <ion-select-option >La Granja: $6000</ion-select-option>
+        <ion-select-option >San Miguel: $5000</ion-select-option>
+        <ion-select-option >San joaquin: $6000</ion-select-option>
+        <ion-select-option >El bosque: $6000</ion-select-option>
+        <ion-select-option >Lo prado: $7000</ion-select-option>
+        <ion-select-option >Cerro Navia: $6000</ion-select-option>
+        <ion-select-option >Quilicura: $7000</ion-select-option>
+        <ion-select-option >Renca: $6000</ion-select-option>
+        <ion-select-option >Recoleta: $6000</ion-select-option>
+        <ion-select-option >Santiago: $7000</ion-select-option>
+        <ion-select-option >Peñalolen: $7000</ion-select-option>
+      </ion-select>
+  </ion-item>
+
+    
+    <ion-item>
+      <ion-label position="floating">Capacidad de pasajeros:</ion-label>
+      <ion-select formControlName="cant" placeholder="Seleccionar">
+      <ion-select-option>1</ion-select-option>
+      <ion-select-option>2</ion-select-option>
+      <ion-select-option>3</ion-select-option>
+      <ion-select-option>4</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+
+
+    <ion-item>
+      <ion-label position="floating">Disponibilidad:</ion-label>
+      <br>
+      <ion-toggle formControlName="dispo"></ion-toggle>
+    </ion-item>
+    
+       </form>
+    <ion-button (click)="CrearInfo()" color="secondary"
+            type="submit" expand="block" color="dark">
+        Confirmar
+    </ion-button>
+  </ion-card-content>
+</ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="secondary">
+  </ion-toolbar>
+</ion-footer>
+
+
